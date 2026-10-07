@@ -1,0 +1,39 @@
+name: video_logo_cleaner
+description: Remove logos, text, and unwanted objects from videos you own or have rights to edit.
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  # The original ffmpeg_kit_flutter package was discontinued and its native
+  # binaries no longer resolve. ffmpeg_kit_flutter_new is the maintained fork
+  # (FFmpeg 8.x, Android v2 embedding) with the same FFmpegKit / FFprobeKit API.
+  # It is GPL-3.0 because it bundles GPL FFmpeg (libx264). See README.
+  ffmpeg_kit_flutter_new: ^4.6.7
+  file_picker: ^8.1.7
+  video_player: ^2.9.3
+  gal: ^2.3.1
+  share_plus: ">=10.1.4 <12.0.0"
+  path_provider: ^2.1.5
+  path: ^1.9.1
+  permission_handler: ^11.4.0
+  device_info_plus: ^11.2.0
+  # BannerAd / InterstitialAd API. Bump to the latest google_mobile_ads
+  # before release if Play Console asks for a newer SDK. Test IDs: ad_ids.dart.
+  google_mobile_ads: ^5.3.1
+  in_app_purchase: ^3.2.1
+  shared_preferences: ^2.3.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+
+flutter:
+  uses-material-design: true
